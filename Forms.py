@@ -1,0 +1,30 @@
+from tkinter import *
+root=Tk()
+root.geometry("440x440")
+root.title("Travel Form")
+def submit():
+    print("Submitted")
+Label(root , text="Welcome to Jaguar Travels" , font="Helvetica 16 bold" ,fg="purple", padx=15 , pady=20).grid(row=0 , column =3)
+Label(root , text="Name" , font="SUNKEN 10 italic" , padx=5, pady=5 , borderwidth=6, fg="green").grid(row=1 , column =2)
+Label(root , text="Phone Number" , font="SUNKEN 10 italic" , padx=5, pady=5 , borderwidth=6, fg="green").grid(row=2 , column =2)
+Label(root , text="Address" , font="SUNKEN 10 italic" , padx=5, pady=5 , borderwidth=6, fg="green").grid(row=3 , column =2)
+Label(root , text="Emergency Contact" , font="SUNKEN 10 italic" , padx=5, pady=5 , borderwidth=6, fg="green").grid(row=4 , column =2)
+Label(root , text="Payment Mode" , font="SUNKEN 10 italic" , padx=5, pady=5 , borderwidth=6 , fg="green").grid(row=5 , column =2)
+
+n=StringVar()
+p=StringVar()
+a=StringVar()
+e=StringVar()
+pa=StringVar()
+f=IntVar()
+Entry(root , textvariable=n).grid(row=1 , column=3)
+Entry(root , textvariable=p).grid(row=2 , column=3)
+Entry(root , textvariable=a).grid(row=3 , column=3)
+Entry(root , textvariable=e).grid(row=4 , column=3)
+Entry(root , textvariable=pa).grid(row=5 , column=3)
+Button(root , text="Press to Submit" , command =submit).grid(row=7 , column=3)
+f_s=Checkbutton(text="Want to prebook meal" )
+Variable=f
+f_s.grid(row=6 , column=3)
+
+root.mainloop()
